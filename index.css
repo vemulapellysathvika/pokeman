@@ -1,0 +1,167 @@
+*{
+    padding: 10px;
+    margin: auto 0;
+}
+body {
+    padding-top: 0px;
+    background-color: black;
+    font-family: proxima-nova, sans-serif;
+    display: grid;
+    grid-template-rows: 25vw 1fr 3vw;
+    height: 100vh;
+    text-align: center;
+    font-size: calc(1rem + 0.5vw);
+}
+
+
+/*SEARCH BAR*/
+.search { /*div*/
+    display: inline-block;
+    align-items: center;
+    align-content:center;
+    margin-bottom: 0;
+    margin-top:0;
+    height: auto;
+}
+.search >img { /*the pokemon symbol image*/
+    display: block;
+    width: 20vw;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchBar { /*input line and search button container*/
+    display: inline-block;
+}
+.searchTerm { /*input line*/
+  width: 20vw;
+  border: 3px solid #FCCF00;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  color: #2468B1;
+  font-weight: bold;
+  font-size: calc(1rem + 0.5vw);
+}
+
+.searchTerm:focus{
+  color: #2468B1; /*//blue*/
+}
+
+button {
+  text-align: center;
+  border: 1px solid #FCCF00;
+  background: #FCCF00; /*yellow*/
+  color: #2468B1; /*//blue*/
+  padding: 7px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: calc(1rem + 0.5vw);
+  align-items: center;
+  align-content: center;
+
+}
+.searchButton {
+  width: 10vw;
+}
+
+.randButton { /*randomizer button*/
+  width: auto;
+  border: 1px solid #2468B1;
+  background: #2468B1;
+  color: #FCCF00;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+/*POKEMON DISPLAY*/
+.pokemon {
+    color: #FCCF00;
+    background-color: black;
+    font-weight: bold;
+    font-size: calc(2rem + 1vw);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    'details stats stats';
+}
+#initial { /*WHEN NO POKEMON IS LOADED YET*/
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  grid-column: 1/4;
+}
+.details { /*block where picture, overall details are */
+  background-color: black;
+  color: #FCCF00;
+  border: 3px solid #FCCF00;
+  border-radius: 5px;
+  padding: 5px;
+  /*grid-column: 1/2;*/
+  grid-area: details;
+}
+.stats { /*block where only stats are */
+  margin: 0;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: black;
+  border: 3px solid #FCCF00;
+  color: #FCCF00;
+  border-radius: 5px;
+  text-align: left;
+  /*grid-column: 2/3;*/
+  grid-area: stats;
+}
+.stats > h3 {
+  color: #2468B1;
+}
+.out { /*outputs from API*/
+  color: #2468B1;
+}
+.details > img {
+  width: auto;
+  height: 15vw;
+}
+@media only screen and (max-width: 768px) { /*responsive design*/
+  .pokemon {
+    grid-template-areas:
+    'details'
+    'stats'
+    'stats';
+  }
+  .details {
+    width: 100%;
+  }
+  .stats {
+    width: 100%;
+  }
+}
+
+
+/*FOOTER*/
+.footer {
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 0;
+    color: #FCCF00;
+    font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #FCCF00;
+  margin: 0;
+}
+
+a:hover{
+  color:  #2468B1; ;
+}
+
+.reference { /*reference to logo*/
+  font-size: calc(0.4rem + 0.5vw);
+}
